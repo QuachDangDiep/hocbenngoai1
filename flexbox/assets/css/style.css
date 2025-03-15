@@ -639,7 +639,7 @@ a{
 
     .footer .footer_item{
         overflow: hidden;
-        flex-direction: row;
+        flex-direction:column;
     }
 
     .project_of{
@@ -802,6 +802,11 @@ a{
 
     .project-fout {
         text-align: left;
+    }
+
+    .footer .footer_item{
+        overflow: hidden;
+        flex-direction:row;
     }
 }
 
