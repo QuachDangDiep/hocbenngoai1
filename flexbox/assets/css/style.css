@@ -11,6 +11,7 @@ body{
     padding: 0;
     font-size: 1rem;
     line-height: 1.5;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -602,6 +603,113 @@ a{
         width: 100%;
     }
 }
+@media (min-width: 320px){
+    .container{
+        max-width: 540px;
+    }
+
+    .header .header_menu .header_list{
+        display: none;
+    }
+
+    .content-grid{
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-bolder{
+        margin-right: 0.5rem;
+    }
+
+    .content-dark{
+        margin-left: 0.5rem;
+    }
+
+    .content_primary{
+        height: 60vw;
+        width: 60vw;
+    }
+    .content-image{
+        height: 65vw;
+    }
+
+    .about .about_center{
+        padding: 0 1rem;
+    }
+
+    .footer .footer_item{
+        overflow: hidden;
+        flex-direction: row;
+    }
+
+    .project_of{
+        font-size: 1.5rem;    
+    }
+
+    .section_project .project-img{
+        width: 100vw;
+        height: 60vh;
+    }
+
+    .section_project .project-img img{
+        width: 60vw;
+        height: 60vh;
+    }
+
+    .resume-amet{
+        padding: 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .resume-between{
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .resume-primary{
+        margin-bottom: 1rem;
+    }
+
+    /* .resume-download{
+        padding-left: 33%;
+        padding-right: 34%;
+    } */
+
+    .resume_skills{
+        overflow: hidden;
+        flex-direction: column;
+        font-size: large;
+    }
+
+    /* .resume-ti{
+        padding: 5rem;
+    } */
+
+    .row_col1 > *{
+        /* flex: 0 0 auto; */
+        width: 100%;
+    }
+
+    .resume-style{
+        height: 100%;
+        /* display: flex; */
+    }
+
+    .project-flex{
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .project-fout{
+        text-align: center;
+    }
+
+    .contact-w{
+        width: 100%;
+    }
+
+}
 
 @media (min-width: 768px){
     .container{
@@ -697,7 +805,7 @@ a{
     }
 }
 
-@media (min-width: 992px){
+@media(min-width: 992px){
     .container{
         max-width: 960px;
     }
@@ -1052,8 +1160,8 @@ a{
     max-width: 100%;
     width: 100%;
     flex-shrink: 0;
-    padding-right: 1.75rem;
-    padding-left: 1.75rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
     margin-top: 0;
 }
 
