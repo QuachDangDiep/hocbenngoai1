@@ -12,6 +12,7 @@ body{
     font-size: 1rem;
     line-height: 1.5;
     box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -109,7 +110,7 @@ a{
 }
 
 .center{
-    text-align: center !important;
+    text-align: center ;
 }
 
 .justify{
@@ -236,33 +237,51 @@ a{
     padding: 1rem 0;
 }
 
+.header_menu{
+    transition: height ease 1s;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 .header .header_menu{
     display: flex;
-    height: 40px;
+    /* height: 40px; */
     padding: 15px 0;
     justify-content: space-between;
     align-items: center;
+}
+
+.header .header_list.open{
+    display: block;
+    /* max-height: 300px; */
+}
+
+.header .header_list{
+    display: none;
+    width: 100%;
+    background: white;
+    padding: 10px 0;
 }
 
 .nav-togg{
     display: inline-block;
 }
 
-.header .header_menu .nav_logo{
+.header .header_menu .navbaer {
     font-size: 20px;
     color: #1e30f3;
     font-weight: 700;
 }
 
-.header .header_menu .header_list{
-    display: none;
-    width: 100%;
-
-}
-
 .header .header_menu .header_list li a{
     color: rgba(0, 0, 0, 0.55);
-    padding: 8px;
+    padding: 8px !important;
     font-size: 14px;
     font-weight: 700;
 }
@@ -294,16 +313,24 @@ a{
     line-height: 1.2;
 }
 
+.content_align {
+}
+
 .content-grid {
     display: grid;
     gap: 1rem;
     margin-bottom: 1rem;
+    /* justify-content: start !important; */
 }
 
 .content-bolde {
     background-color: #1a29cf;
     color: white;
     padding: 1rem 3rem;
+}
+
+.content-bolder{
+    font-size: 4rem;
 }
 
 .content-dark{
@@ -328,7 +355,7 @@ a{
 
 .content_primary{
     position: relative;
-    margin-top: 5vw;
+    /* margin-top: 5vw; */
     border-radius: 5vw;
     height: 75vw;
     width: 75vw;
@@ -503,7 +530,7 @@ a{
     }
 
     .header .header_menu .header_list{
-        display: none;
+        /* display: none; */
     }
 
     .content-grid{
@@ -525,6 +552,10 @@ a{
     }
     .content-image{
         height: 65vw;
+    }
+
+    .content_profile{
+        margin-top: 5rem;
     }
 
     .about .about_center{
@@ -602,6 +633,10 @@ a{
     .contact-w{
         width: 100%;
     }
+
+    .content_align{
+        margin-bottom: 50px;
+    }
 }
 @media (min-width: 320px){
     .container{
@@ -609,21 +644,21 @@ a{
     }
 
     .header .header_menu .header_list{
-        display: none;
+        /* display: none; */
     }
 
-    .content-grid{
+    /* .content-grid{
         display: flex;
         justify-content: center;
-    }
+    } */
 
     .content-bolder{
         margin-right: 0.5rem;
     }
 
-    .content-dark{
+    /* .content-dark{
         margin-left: 0.5rem;
-    }
+    } */
 
     .content_primary{
         height: 60vw;
@@ -631,6 +666,10 @@ a{
     }
     .content-image{
         height: 65vw;
+    }
+
+    .content_profile{
+        margin-top: 5rem;
     }
 
     .about .about_center{
@@ -709,6 +748,9 @@ a{
         width: 100%;
     }
 
+    .content_align{
+        margin-bottom: 50px;
+    }
 }
 
 @media (min-width: 768px){
@@ -717,7 +759,7 @@ a{
     }
 
     .header .header_menu .header_list{
-        display: none;
+        /* display: none; */
     }
 
     .content_primary{
@@ -750,6 +792,10 @@ a{
         height: 60vh;
     }
 
+    .content_align{
+        margin-bottom: 50px;
+    }
+
     .section_project .project-img img{
         width: 62vw;
         height: 60vh;
@@ -760,6 +806,10 @@ a{
         font-size: 1rem;
         line-height: 1.5;
     } */
+
+    .content_profile{
+        margin-top: 5rem;
+    }
 
     .resume-amet{
         padding: 1rem;
@@ -888,6 +938,13 @@ a{
     .navbar-toggler{
         display: none;
     }
+
+    .project-flex{
+        display: none;
+        flex-direction: row-reverse;
+        align-items: center;
+        text-align: left;
+    }
 }
 
 @media (min-width: 1200px){
@@ -923,6 +980,11 @@ a{
 
     .about-flex a{
         font-size: 2rem;
+    }
+
+    .content_align{
+        /* width: 40%; */
+        text-align: center;
     }
 
 
@@ -997,9 +1059,10 @@ a{
         margin-bottom: 3rem;
     }
 
-    .content_align{
+    /* .content_align{
         width: 40%;
-    }
+        text-align: center;
+    } */
 
     .content_image{
         width: 60%;
@@ -1062,7 +1125,18 @@ a{
         font-size: 1rem;
         line-height: 1.5;
     } */
+
+    .content_align{
+        margin-bottom: 0px;
+        text-align: left;
+    }
+
+    .content-grid {
+        display: flex;
+        justify-content: start;
+    }
 }
+
 
 
 /* Resume */
@@ -1280,7 +1354,7 @@ a{
     margin-top: 0;
     margin-bottom: 0.5rem;
     line-height: 1.2;
-    font-size: 2rem;
+    font-size: calc(1.325rem + 0.9vw);
 }
 
 .project-p{
@@ -1300,7 +1374,7 @@ a{
 .project_dis4{
     line-height: 1.2;
     margin-top: 0;
-    font-size: calc(1.475rem + 3.4vw);
+    font-size: calc(1.475rem + 1.7vw);
 }
 
 .project_contact{
