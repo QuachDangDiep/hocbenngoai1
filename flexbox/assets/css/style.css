@@ -344,7 +344,7 @@ a{
 .header-item:hover .header-it {
     opacity: 1;
     visibility: visible;
-    top: 100%;
+    /* top: 100%; */
 }
 
 .header-mon {
@@ -365,6 +365,88 @@ a{
 }
 
 .header-mon li:hover {
+    background: var(--link-color);
+    color: var(--white-color);
+}
+
+/* resume */
+.header-item {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+
+.header-item a {
+    text-decoration: none;
+    color: var(--black-color);
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+}
+
+.header-resume {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    transform: translateX(-76%); 
+    z-index: 1;
+    background: var(--white-color);
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 1250px;
+    padding: 20px;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
+}
+
+.header-row{
+    /* position: absolute; */
+    padding-top: 40px;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.header-item:hover .header-resume {
+    opacity: 1;
+    visibility: visible;
+    /* top: 100%; */
+}
+
+.header-menucol {
+    flex: 1; 
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    /* text-align: center; */
+}
+
+
+.header-menucol:last-child {
+    border-right: none;
+}
+
+.header-title {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-title li {
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* .header-title li a {
+    text-decoration: none;
+    color: var(--black-color);
+} */
+
+.header-title li a:hover {
     background: var(--link-color);
     color: var(--white-color);
 }
